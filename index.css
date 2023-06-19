@@ -81,9 +81,10 @@ a{
 }
 
 .card{
-    margin: 20px;
+    margin: 90px;
     position: relative;
     top: 30px; 
+    left: 210px;
     background-color: rgb(227, 196, 196);
     border-radius: 15px;
     width: 250px;
