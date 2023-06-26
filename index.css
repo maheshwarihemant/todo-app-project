@@ -159,6 +159,10 @@ position: absolute; top: 25px;
         flex-direction: column; 
         height: 100rem;
     }
+    .card{
+        position: relative;
+        left: 70px;
+    }
 
     
  }
