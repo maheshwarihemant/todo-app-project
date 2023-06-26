@@ -1,9 +1,18 @@
 let data=[];
 let cardId;
+let isBlur = false;
 
-function showAddCardPop() {
+function showAddCardPop(id) {
     const popup1 = document.getElementById("add-new-list-border");
     popup1.style.display = "block";
+    cardId = id;
+
+    const cardContainer = document.getElementById("card-container");
+  if (!isBlur) {
+    cardContainer.classList.add("blur");
+    isBlur = true;
+  }
+
 }
 
 // close Add card popup
@@ -11,6 +20,9 @@ function closeAddCardPopup() {
     const popup1 = document.getElementById("add-new-list-border");
     popup1.style.display = "none";
 
+    const cardContainer = document.getElementById("card-container");
+    cardContainer.classList.remove("blur"); // Remove the blur effect
+    isBlur = false; // Update the blur state
   }
   
   function handleAddCard() {
@@ -35,6 +47,9 @@ function closeAddCardPopup() {
     const backButton = document.querySelector('#back')
     backButton.style.display = 'none'
      
+    const cardContainer = document.getElementById("card-container");
+    cardContainer.classList.remove("blur"); // Remove the blur effect
+    isBlur = false; // Update the blur state
   }
 
 
